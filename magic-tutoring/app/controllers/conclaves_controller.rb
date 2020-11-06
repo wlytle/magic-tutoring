@@ -1,0 +1,2 @@
+class ConclavesController < ApplicationController
+end

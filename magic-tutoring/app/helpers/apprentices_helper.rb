@@ -1,0 +1,2 @@
+module ApprenticesHelper
+end

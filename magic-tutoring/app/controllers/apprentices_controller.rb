@@ -1,0 +1,2 @@
+class ApprenticesController < ApplicationController
+end
