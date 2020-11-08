@@ -1,0 +1,6 @@
+<h1>Professors</h1>
+<ul>
+<% @professors.each do |professor| %>
+    <div><%= link_to "#{professor.name} - #{professor.subject.name}" , professor_path(professor) %></div>
+<% end %>
+</ul>
