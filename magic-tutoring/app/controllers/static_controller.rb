@@ -3,7 +3,7 @@ class StaticController < ApplicationController
     def welcome
     end
 
-    def inter
+    def intermediate
     end
 
 end
