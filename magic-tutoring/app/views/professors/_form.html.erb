@@ -1,0 +1,32 @@
+<% if @professor.errors.any? %>
+    <p class="danger"><strong><%= pluralize(@professor.errors.size, "error") %> have occured </p>
+    <ul>
+        <% @professor.errors.full_messages.each do |e| %>
+            <li class="danger"><%= e %> </li>
+        <% end %>
+    </ul>
+<% end %>
+
+<%= form_for @professor do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %> <br>
+
+    <%= f.label :house %>
+    <%= f.collection_select :house, @houses, :to_s, :to_s %><br>
+
+    <%= f.label :subject %>
+    <%= f.collection_select :subject_id, @subjects, :id, :name %><br>
+
+    <%= f.label :availability %>
+    <%= f.text_field :availability %> <br>
+
+    <%= f.label :username %>
+    <%= f.text_field :username %> <br>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %> <br>
+
+    <%= f.label :confirm_password %>
+    <%= f.password_field :password_confirmation %> <br>
+    <%= f.submit %>
+<% end %>
