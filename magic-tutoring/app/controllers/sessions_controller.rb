@@ -1,34 +1,33 @@
 class SessionsController < ApplicationController
-  before_action :new_user, only: [:new, :create]
-
   def new
   end
 
   def create
-    raise params
+    if params[:user_type] == "apprentice"
+      @user = Apprentice.find_by(username: params[:username])
+      if @user && @user.authenticate(params[:password])
+        session[:user_id] = @user.id
+        session[:user_type] = params[:user_type]
+        redirect_to @user
+      else
+        flash[:danger] = "Incorrect username or password"
+        redirect_to new_session_path
+      end
+    elsif params[:user_type] == "professor"
+      @user = Professor.find_by(username: params[:username])
+      if @user && @user.authenticate(params[:password])
+        session[:user_id] = @user.id
+        session[:user_type] = params[:user_type]
+        redirect_to @user
+      else
+        flash[:danger] = "Incorrect username or password"
+        redirect_to new_session_path
+      end
+    end
   end
 
   def destroy
-  end
-
-  private
-
-  def new_user
-    #set params on login in intermediate page to be either session[:apprentice] = true or session[:professor] = true
-
-    #Use this when everything is wired up
-    # if session[:apprentice]
-    #@user = Apprentice.new
-    #session[:apprentice] = true #delete this line when wired up
-    # elsif params[:professor]
-    #     @user = Professor.new
-    # else
-    #     flash[:danger] = "You be either a professor or apprentice to login"
-    #     #Set correct path when we meet
-    #     redirect_to welocme_intermediate_path
-    # end
-  end
-
-  def user_params
+    session.delete :user_id
+    session.delete :user_type
   end
 end

@@ -1,11 +1,18 @@
-<h1>Login</h1>
+<h1>Welcome Back</h1>
+<h2> Please identify yourself</h2>
+
+<% if flash[:danger] %>
+    <p class="danger"><strong> <%= flash[:danger] %> <strong></p>
+<% end %>
+
 <%= form_with url: sessions_path, method: :post do |f| %>
     <%= f.label :username %>
     <%= f.text_field :username %> <br>
     <%= f.label :password %>
     <%= f.password_field :password %><br>
     <%= f.label :professor %>
-    <%= f.radio_button :professor %> <br>
-
+    <%= f.radio_button :user_type, "professor" %> 
+    <%= f.label :apprentice %>
+    <%= f.radio_button :user_type, "apprentice" %> <br>
     <%= f.submit "Login" %>
 <% end %>
