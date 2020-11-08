@@ -71,3 +71,7 @@ Professor.create(name: "Fallohal Warduntz", house: houses.sample, subject: Subje
 Professor.create(name: "Quinlantz Pipwarrick", house: houses.sample, subject: Subject.all.sample, username: "p9", password: "password")
 Professor.create(name: "Mayhallow Vorkilldon", house: houses.sample, subject: Subject.all.sample, username: "p0", password: "password")
 
+Apprentice.all.each do |app|
+    rand(1..5).times do ApprenticeSubject.create(apprentice: app, subject: Subject.all.sample)
+    end
+end
