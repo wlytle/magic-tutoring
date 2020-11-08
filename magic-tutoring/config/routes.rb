@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :apprentices
   resources :sessions, only: [:new, :create, :destroy]
   get "/", to: "static#welcome", as: "welcome"
-  get "/inter", to: "static#inter", as: "intermediate"
+  get "/intermediate", to: "static#intermediate", as: "intermediate"
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
