@@ -2,6 +2,10 @@ class ProfessorsController < ApplicationController
   before_action :houses, only: [:new, :create, :edit, :update]
   before_action :get_professor, only: [:show, :edit, :update, :destroy]
 
+  def show
+    @conclaves = @professor.conclaves
+  end
+
   def index
     @professors = Professor.all
   end

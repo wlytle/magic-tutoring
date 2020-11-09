@@ -16,7 +16,7 @@ Conclave.destroy_all
 
 subjects = ["Hexual Education", "Familiar Husbandry", "Western Herbology and Flora", "Divinatory Arts and Seance", "Transformation Science", "Ancient Magical History of New England", "Apothecary Economics", "Enchanted Fauna of the Americas", "Black Magic Dispelling", "Druidic Incantations and Shamanism", "Practical Sorcery", "Broomstick Sports and Foundational Levitation", "Spellbinding Calligraphy", "Pillbugs and Potions", "Advanced Theory in Conjuring"]
 
-#HOUSES 
+#HOUSES
 
 houses = ["Horned Serpent", "Wampus", "Thunderbird", "Pukwudgie"]
 
@@ -40,7 +40,7 @@ Apprentice.create(name: "Aleczandii Greyking", house: houses.sample, year: rand(
 Apprentice.create(name: "Matelzior Sallindom", house: houses.sample, year: rand(1..7), username: "Matty", password: "password")
 Apprentice.create(name: "Claymourn Pirrush", house: houses.sample, year: rand(1..7), username: "Clay", password: "password")
 
-#SUBJECTS 
+#SUBJECTS
 
 Subject.create(name: "Hexual Education", description: "A comprehensive exploration of the applications of Hexes. Details basics of Hex formulation and identification. Bring your wand, parchment, and quills. Includes thorough Hex-safety protocol, and cleansing techniques. Take your place in the Banishment Chamber of the Southern campus Dungeons. Pre-Requisite course work in Practical Sorcery required.")
 Subject.create(name: "Familiar Husbandry", description: "Learn about common household familiars and their care. Covering materials on feline mental health, toad terrariums, owl feeding and care, common familiar maladies and curing. Train your familiar for collaborative spellwork and learn to communicate with your familiar. Class is held in the Fauna wing of the Biothaumaturgy building.")
@@ -58,7 +58,7 @@ Subject.create(name: "Spellbinding Calligraphy", description: "You always need t
 Subject.create(name: "Pillbugs and Potions", description: "Learn how to formulate alleviating solutions for common magical ailments, practical use, and functional application. Must have beginner potion set, 10 glass vials, and an iron cauldron. Meet in the Magi-Chem Auditorium on the North Colliseum Campus.")
 Subject.create(name: "Advanced Theory in Conjuring", description: "Summon sumptuous feasts and festive delicacies through conjuring! Create etheric images and entertainment for all occasions using your imagination and sequenced wand-waving. Practice enchanted astral-projection illuminations, and develop your prestidigitation skills. Meet in the Hologram Planetarium and bring your 'Projects in Conjuring' workbook from the bookstore.")
 
-#PROFESSORS  
+#PROFESSORS
 
 Professor.create(name: "Haliburton Nomflask", house: houses.sample, subject: Subject.all.sample, username: "p1", password: "password")
 Professor.create(name: "Lantzeltior Helikh", house: houses.sample, subject: Subject.all.sample, username: "p2", password: "password")
@@ -72,6 +72,5 @@ Professor.create(name: "Quinlantz Pipwarrick", house: houses.sample, subject: Su
 Professor.create(name: "Mayhallow Vorkilldon", house: houses.sample, subject: Subject.all.sample, username: "p0", password: "password")
 
 Apprentice.all.each do |app|
-    rand(1..5).times do ApprenticeSubject.create(apprentice: app, subject: Subject.all.sample)
-    end
+  rand(1..5).times do ApprenticeSubject.create(apprentice: app, subject: Subject.all.sample) end
 end

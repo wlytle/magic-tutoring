@@ -11,8 +11,10 @@
     <%= f.label :name %>
     <%= f.text_field :name %> <br>
 
+    <% if @professor.name.nil? %>
     <%= f.label :house %>
     <%= f.collection_select :house, @houses, :to_s, :to_s %><br>
+    <% end %>
 
     <%= f.label :subject %>
     <%= f.collection_select :subject_id, @subjects, :id, :name %><br>

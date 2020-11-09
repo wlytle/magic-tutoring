@@ -3,9 +3,17 @@
     <h3>Proficiency: <%= @professor.subject.name %></h3>
     <h3>House: <%= @professor.house %></h3>
     <h3>Availability: <%= @professor.availability %></h3>
-    <%#<h3>Conclaves: <%= @professor.conclaves %></h3>
 
     </ul>
 
 
+<%= month_calendar events: @conclaves do |date, conclaves| %>
+  <%= date.day %>
+
+  <% conclaves.each do |conclave| %>
+    <div>
+      <%= link_to conclave.location, conclave %>
+    </div>
+  <% end %>
+<% end %>
 

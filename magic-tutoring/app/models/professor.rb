@@ -1,6 +1,6 @@
 class Professor < ApplicationRecord
   belongs_to :subject
-  has_many :conclaves
+  has_many :conclaves, class_name: "Conclave"
   has_many :apprentices, through: :conclaves
   has_secure_password
 
