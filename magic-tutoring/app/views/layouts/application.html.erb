@@ -10,13 +10,29 @@
   </head>
 
   <body>
-
-  <%= "WELCOME!" %>
-    <%= "WRITING DESK" %>
-    <%= "RETURN" %>
-    <%= "ENROLL" %> 
-    <%= link_to "APPRENTICES", apprentices_path %> 
+  <nav>
+<% if current_user && current_user.class == Apprentice %>
+  <%= link_to "WELCOME!", welcome_path %>
+    <%= link_to "WRITING DESK", apprentice_path(current_user)%>
+    <%= link_to "DEPART", logout_path, method: "post", data: {confirm: "Have you finished your studies?"} %>
     <%= link_to "PROFESSORS", professors_path %> 
+    <%= link_to "SUBJECTS", subjects_path %>
+
+    <% elsif current_user && current_user.class == Professor %>
+  <%= link_to "WELCOME!", welcome_path %>
+    <%= link_to "WRITING DESK", professor_path(current_user) %>
+    <%= link_to "DEPART", logout_path, method: "post" %>
+    <%= link_to "PROFESSORS", professors_path %> 
+    <%= link_to "SUBJECTS", subjects_path %>
+
+<% else %>
+  <%= link_to "RETURN", new_session_path %>
+  <%= link_to "ENROLL", new_session_path %>
+  <%= link_to "PROFESSORS", professors_path %> 
+  <%= link_to "SUBJECTS", subjects_path %>
+<% end %>  
+</nav>
+
 
 
 

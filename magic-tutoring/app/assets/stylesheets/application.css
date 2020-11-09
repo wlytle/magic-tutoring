@@ -21,3 +21,10 @@
 .danger {
   color: red;
 }
+.message { 
+  color: green;
+}
+
+img {
+  width: 350px;
+}

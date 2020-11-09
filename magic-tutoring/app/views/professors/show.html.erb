@@ -1,4 +1,7 @@
 <h1><%= @professor.name %></h1>
+
+    <% prof = @professor.name.split(" ") %>
+    <%= image_tag ("professors/#{prof.first.downcase}.jpg") %>
     <ul>
     <h3>Proficiency: <%= @professor.subject.name %></h3>
     <h3>House: <%= @professor.house %></h3>
