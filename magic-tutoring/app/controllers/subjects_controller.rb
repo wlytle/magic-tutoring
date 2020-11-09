@@ -1,7 +1,6 @@
 class SubjectsController < ApplicationController
 
     before_action :find_subject, only: [:show, :edit, :update]
-    before_action :sub_prof, only: :show
 
     def index 
         @subjects = Subject.all
@@ -17,7 +16,6 @@ class SubjectsController < ApplicationController
     end
 
     def show 
-        
     end
 
     private
