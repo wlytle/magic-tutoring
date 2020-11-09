@@ -1,1 +1,9 @@
-<%= @subject.inspect %>
+<h1>Create new Conclave for <%= @subject.name %></h1>
+<%= form_for @conclave do |f| %>
+    <%= f.hidden_field :subject_id, value: @subject.id %>
+    <%= f.label :location %>
+    <%= f.collection_select :location, @locations, :to_s, :to_s %>
+    <%= f.label :professor %>
+    <%= f.collection_select :professor_id, @subject.professors, :id, :name %>
+    <%= f.submit %>
+<% end %>

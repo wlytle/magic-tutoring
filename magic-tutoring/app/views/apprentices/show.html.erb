@@ -6,7 +6,7 @@
 <h3> To schedule a conclave: </h3>
 <ul>
   <% @apprentice.subjects.each do |sub| %>
-    <li><%= link_to sub.name, new_conclafe_path %></li>
+    <li><%= link_to sub.name, new_conclave_path(sub) %></li>
   <% end %>
 </ul>
 <%= button_to 'Edit Apprentice', edit_apprentice_path(@apprentice), :method => :get %>
