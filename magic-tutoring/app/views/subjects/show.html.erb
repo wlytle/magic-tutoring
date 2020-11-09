@@ -1,0 +1,12 @@
+<h1><%= @subject.name %></h1>
+<br>
+<h3>Description: <%= @subject.description %></h3>
+<br>
+<br>
+#method to list the professors that teach this subject
+<h3>Taught by: <ul><% sub_prof.each do |sp| %></h3><br>
+                <li><%= link_to sp.name, sp %></li>
+                <% end %>
+                </ul>
+                
+<%= link_to "View all Subjects", subjects_path %>
