@@ -1,6 +1,8 @@
 class ProfessorsController < ApplicationController
+
   before_action :houses, only: [:new, :create, :edit, :update]
   before_action :get_professor, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authorized, only: [:index, :new, :create]
 
   def index
     @professors = Professor.all

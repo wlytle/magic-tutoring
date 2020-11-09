@@ -1,5 +1,7 @@
 class ApprenticesController < ApplicationController
+  
   before_action :find_apprentice, only: [:show, :edit, :update]
+  skip_before_action :authorized, only: [:new, :create]
 
   def new
     @apprentice = Apprentice.new
