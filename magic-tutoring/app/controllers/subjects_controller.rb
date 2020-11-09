@@ -1,7 +1,7 @@
 class SubjectsController < ApplicationController
 
     before_action :find_subject, only: [:show, :edit, :update]
-    skip_before_action :authorized, only: :index
+    skip_before_action :authorized, only: [:index, :show]
 
     def index 
         @subjects = Subject.all
