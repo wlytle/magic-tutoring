@@ -3,7 +3,15 @@
     <%= f.hidden_field :subject_id, value: @subject.id %>
     <%= f.label :location %>
     <%= f.collection_select :location, @locations, :to_s, :to_s %>
-    <%= f.label :professor %>
-    <%= f.collection_select :professor_id, @subject.professors, :id, :name %>
-    <%= f.submit %>
+
+    <%= month_calendar events: @subject.availabilities do |date, avails| %>
+      <%= date.day %>
+
+      <% avails.each do |avail| %>
+        <div>
+        <%= f.button "#{avail.format_start_time}, #{pluralize(avail.duration.to_i, "hr")} #{avail.professor.name}", name: "availability", value: avail.id %>
+        </div>
+      <% end %>
+    <% end %>
+  
 <% end %>

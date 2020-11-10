@@ -3,6 +3,6 @@ class Conclave < ApplicationRecord
   belongs_to :apprentice
 
   def start_time
-    self.time
+    self.date
   end
 end

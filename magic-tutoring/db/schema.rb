@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 2020_11_10_003530) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "date"
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.datetime "begin_time"
+    t.datetime "finish_time"
     t.index ["apprentice_id"], name: "index_conclaves_on_apprentice_id"
     t.index ["professor_id"], name: "index_conclaves_on_professor_id"
   end

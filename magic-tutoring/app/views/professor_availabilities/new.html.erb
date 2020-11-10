@@ -7,7 +7,7 @@
 
   <% avails.each do |avail| %>
     <div>
-      <%= link_to "#{avail.begin_time.strftime("%I:%M %p")}, #{pluralize(avail.duration, "hr")}", edit_professor_availability_path(avail) %>
+      <%= link_to "#{avail.format_start_time}, #{pluralize(avail.duration.to_i, "hr")}", edit_professor_availability_path(avail) %>
     </div>
   <% end %>
 <% end %>

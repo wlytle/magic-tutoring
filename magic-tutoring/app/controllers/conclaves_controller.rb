@@ -7,12 +7,17 @@ class ConclavesController < ApplicationController
     @subject = Subject.find(params[:id])
     @apprentice = current_user
     locations
-    @conclave = Conclave.new
+    init_conclave
   end
 
   def create
     @apprentice = current_user
-    @apprentice.conclaves.build(conclave_params)
+    availability = ProfessorAvailability.find(params[:availability])
+    professor = availability.professor
+    date = availability.date
+    begin_time = availability.begin_time
+    finish_time = availability.finish_time
+    @apprentice.conclaves.build(professor: professor, location: params[:conclave][:location], date: date, begin_time: begin_time, finish_time: finish_time)
     if @apprentice.save
       redirect_to @apprentice
     else
@@ -23,10 +28,14 @@ class ConclavesController < ApplicationController
   private
 
   def conclave_params
-    params.require(:conclave).permit(:apprentice_id, :professor_id, :location)
+    params.require(:conclave).permit(:location)
   end
 
   def locations
     @locations = ["Solarium", "West Dungeons", "Hallowed Tree", "Fauna Wing", "Thaumaturgy Labs", "Herbology Dome", "Skiliworg Fields"]
+  end
+
+  def init_conclave
+    @conclave = Conclave.new
   end
 end
