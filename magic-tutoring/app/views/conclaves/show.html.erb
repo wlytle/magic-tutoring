@@ -1,4 +1,8 @@
 <h1>Conclave</h1>
 <p>Student: <%= @conclave.apprentice.name %></p>
+<p>Professor: <%= @conclave.professor.name %></p>
 <p>Location: <%= @conclave.location %></p>
 <p>Subject: <%= @conclave.professor.subject.name %></p>
+<p>Date: <%= @conclave.date.strftime("%B %d, %Y") %></p>
+<p>Time: <%= "#{@conclave.begin_time.strftime("%I:%M %p")} - #{@conclave.finish_time.strftime("%I:%M %p")}" %></p>
+<p>Location: <%= @conclave.location %></p>

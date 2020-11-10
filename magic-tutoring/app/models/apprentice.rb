@@ -6,6 +6,10 @@ class Apprentice < ApplicationRecord
   has_secure_password
   validate :reject_student
 
+  def first_name
+    self.name.split(" ")[0]
+  end
+
   def reject_student
     if name.gsub(/\s+/, " ").strip.downcase == "tom riddle"
       errors.add(:name, "You don't even go here.")

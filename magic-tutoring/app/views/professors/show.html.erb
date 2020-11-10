@@ -8,6 +8,7 @@
         <%= button_to "Manage Availability", new_professor_availability_path(@professor), method: :get if @professor == current_user %>
 
         <br>
+        <% if current_user == @professor %>
         <h2>Conclaves</h2>
         <%= render "conclaves/schedule" %>
-
+        <% end %>
