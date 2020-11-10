@@ -17,6 +17,7 @@ class ConclavesController < ApplicationController
     date = availability.date
     begin_time = availability.begin_time
     finish_time = availability.finish_time
+
     @apprentice.conclaves.build(professor: professor, location: params[:conclave][:location], date: date, begin_time: begin_time, finish_time: finish_time)
     if @apprentice.save
       redirect_to @apprentice
