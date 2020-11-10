@@ -11,4 +11,13 @@ class Professor < ApplicationRecord
       errors.add(:name, "It appears you are too evil to teach here.")
     end
   end
+
+  def professor_image
+    prof = self.name.split(" ").first.downcase!
+    if Dir["app/assets/images/professors/#{prof}.jpg"].empty?
+      "professors/default.jpg"
+    else
+      "professors/#{prof}.jpg"
+    end
+  end 
 end

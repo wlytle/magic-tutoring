@@ -41,7 +41,10 @@ class ProfessorsController < ApplicationController
 
   def destroy
     @professor.destroy
-    redirect_to welcome_path
+    session.delete :user_id
+    session.delete :user_type
+    flash[:message] = "You have self destructed."
+    redirect_to welcome_path    
   end
 
   private
