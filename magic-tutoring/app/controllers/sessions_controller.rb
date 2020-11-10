@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+  
+  skip_before_action :authorized
+
   def new
   end
 
@@ -29,6 +32,7 @@ class SessionsController < ApplicationController
   def destroy
     session.delete :user_id
     session.delete :user_type
+    flash[:message] = "Thank you for studying. See you next time."
     redirect_to welcome_path
   end
 end
