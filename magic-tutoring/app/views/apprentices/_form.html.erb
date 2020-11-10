@@ -1,8 +1,8 @@
 <% if @apprentice.errors.any? %>
   <ul>
-    <% @apprentice.errors.full_messages.each do |m|%>
+    <% @apprentice.errors.full_messages.each do |m| %>
       <li class="danger"><%= m %></li>
-    <% end%>
+    <% end %>
   </ul>
 <% end %>
 <%= form_for @apprentice do |f| %>
@@ -11,7 +11,7 @@
   <%= f.label :house %><br>
   <%= f.collection_select :house, @houses, :to_s, :to_s %><br>
   <%= f.label :year %><br>
-  <%= f.collection_select :year, ["1", "2", "3","4", "5", "6", "7"], :to_s, :to_s %> <br>
+  <%= f.collection_select :year, ["1", "2", "3", "4", "5", "6", "7"], :to_s, :to_s %> <br>
   <%= f.label :username %><br>
   <%= f.text_field :username %><br>
   <%= f.label :password %><br>

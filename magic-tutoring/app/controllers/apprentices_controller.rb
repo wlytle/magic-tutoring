@@ -15,6 +15,8 @@ class ApprenticesController < ApplicationController
   def create
     @apprentice = Apprentice.new(apprentice_params)
     if @apprentice.save
+      session[:user_id] = @apprentice.id
+      session[:user_type] = "apprentice"
       redirect_to @apprentice
     else
       houses
@@ -33,7 +35,10 @@ class ApprenticesController < ApplicationController
 
   def destroy
     @apprentice.destroy
-    redirect_to "/"
+    session.delete :user_id
+    session.delete :user_type
+    flash[:message] = "You have self destructed."
+    redirect_to welcome_path
   end
 
   private

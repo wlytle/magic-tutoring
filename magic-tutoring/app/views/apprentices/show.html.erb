@@ -1,16 +1,17 @@
 <h1><%= @apprentice.first_name %>'s Writing Desk</h1>
-<p>Name: <%= @apprentice.name %></p>
-<p>School Year: <%= @apprentice.year %></p>
-<p>Username: <%= @apprentice.username %></p>
-<p>House: <%= @apprentice.house %></p>
+<%= image_tag ("site/writingdesk.jpg"), class: "writing-desk" %>
+<h3>School Year: <%= @apprentice.year %></h3>
+<h3>Username: <%= @apprentice.username %></h3>
+<h3>House: <%= @apprentice.house %></h3>
 <h3> To schedule a conclave: </h3>
 <ul>
   <% @apprentice.subjects.each do |sub| %>
     <li><%= link_to sub.name, new_conclave_path(sub) %></li>
   <% end %>
 </ul>
-<%= button_to "Edit Apprentice", edit_apprentice_path(@apprentice), method: :get %> <br>
+<%= button_to "Edit Apprentice", edit_apprentice_path(@apprentice), method: :get, class: "button" %><br>
 
 <h2>Upcoming Conclaves </h2>
 
  <%= render "conclaves/schedule" %>
+

@@ -2,7 +2,7 @@ class ProfessorAvailabilitiesController < ApplicationController
   before_action :get_professor_availability, only: [:edit, :update]
 
   def new
-    current_user
+    @professor = current_user
     @pa = ProfessorAvailability.new
   end
 

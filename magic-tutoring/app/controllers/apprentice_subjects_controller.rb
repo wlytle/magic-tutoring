@@ -12,7 +12,7 @@ class ApprenticeSubjectsController < ApplicationController
   end
   
   def delete
-    # delete the apprenticeSubject
+    # delete the ApprenticeSubject
     redirect_to # back to the apprentice
   end
 
