@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ body {
+  background: goldenrod;
+ }
+
 .field_with_errors {
   padding: 2px;
   background-color: red;
@@ -26,5 +30,46 @@
 }
 
 img {
-  width: 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+h1 {
+  font-family: cursive;
+  text-align: center;
+  font-size: 60px;
+}
+
+h2 {
+  font-family: cursive;
+  margin: auto;
+  text-align: center;
+  font-size: 40px;
+}
+
+h3 {
+  font-family: cursive;
+}
+
+.welcome-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.writing-desk {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.button {
+  color: white;
+  background-color: black; 
+  font-size: medium;
+  font-family: cursive;
 }

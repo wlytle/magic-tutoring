@@ -15,7 +15,6 @@ class ProfessorsController < ApplicationController
 
   def create
     @professor = Professor.new(professor_params)
-
     if @professor.save
       session[:user_id] = @professor.id
       session[:user_type] = "professor"

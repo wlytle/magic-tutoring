@@ -8,4 +8,7 @@ class StaticController < ApplicationController
     def intermediate
     end
 
+    def about
+    end
+
 end

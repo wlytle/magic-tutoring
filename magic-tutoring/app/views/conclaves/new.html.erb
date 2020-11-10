@@ -5,5 +5,5 @@
     <%= f.collection_select :location, @locations, :to_s, :to_s %>
     <%= f.label :professor %>
     <%= f.collection_select :professor_id, @subject.professors, :id, :name %>
-    <%= f.submit %>
+    <%= f.submit, class: "button" %>
 <% end %>

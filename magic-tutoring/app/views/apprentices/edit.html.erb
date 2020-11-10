@@ -2,4 +2,4 @@
 <%= form_tag apprentice_path(@apprentice), method: "put" do %>
   <%= render 'form' %>
 <% end %> <br>
-<%= button_to "Delete apprentice", @apprentice, method: :delete, data: {confirm: "Are you sure?"} %>
+<%= button_to "Delete apprentice", @apprentice, method: :delete, data: {confirm: "Are you sure?"}, class: "button" %>

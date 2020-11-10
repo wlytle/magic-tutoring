@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create]
   post "/logout", to: "sessions#destroy", as: "logout"
   get "/", to: "static#welcome", as: "welcome"
+  get "/about", to: "static#about", as: "about"
 
   get "/intermediate", to: "static#intermediate", as: "intermediate"
   get "/subject/:id/conclave", to: "conclaves#new", as: "new_conclave"

@@ -1,16 +1,11 @@
-<h1><%= @professor.name %></h1>
+<h1><%= @professor.name %></h1> 
+<%= image_tag (@professor.professor_image) %>
+<h3>Proficiency: <%= @professor.subject.name %></h3>
+<h3>House: <%= @professor.house %></h3>
+<h3>Availability: <%= @professor.availability %></h3>
+<%#<h3>Conclaves: <% @professor.conclaves.eac %>
+<%= button_to "Edit Profile", edit_professor_path(@professor), class: "button", method: :get if @professor == current_user%>
 
-    
-    
-        <%= image_tag (@professor.professor_image) %>
-
-    
-        <h3>Proficiency: <%= @professor.subject.name %></h3>
-        <h3>House: <%= @professor.house %></h3>
-        <h3>Availability: <%= @professor.availability %></h3>
-        <%#<h3>Conclaves: <% @professor.conclaves.eac %>
-        <%= button_to "Edit Profile", edit_professor_path(@professor), method: :get if @professor == current_user%>
-        
 
     
 

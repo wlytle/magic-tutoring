@@ -1,5 +1,6 @@
 <h1>Welcome to Oktuskar Apprenticery</h1>
 <h2>From Novice to Adept</h2>
+<%= image_tag ("site/building.jpg"), class: "welcome-pic" %>
 <br>
     <% if flash[:message] %>
         <p class="message"><%= flash[:message]%></p>
@@ -9,6 +10,6 @@
 <br>
 <h3><%= link_to "Browse our Professors", professors_path %></h3>
 <br>
-<h2>"Return" if you are a member, or "Enroll" to create a new ledger!</h2>
-<h3><%= button_to "Return", new_session_path, method: :get %>    <%= button_to "Enroll", intermediate_path, method: :get %></h3>
+<h3>"Return" if you are a member, or "Enroll" to create a new ledger!</h3>
+<h3><%= button_to "Return", new_session_path, method: :get, class: "button" %><br><%= button_to "Enroll", intermediate_path, method: :get, class: "button" %></h3>
 
