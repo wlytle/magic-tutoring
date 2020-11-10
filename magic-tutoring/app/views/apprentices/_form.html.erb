@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <label>Name:</label><br>
 <%= text_field_tag :name, @apprentice.name %><br>
 <label>Username:</label><br>
@@ -5,3 +6,27 @@
 <label>New Password:</label><br>
 <%= password_field :password_digest, @apprentice.password_digest %><br>
 <%= submit_tag "Submit", class: "button" %>
+=======
+<% if @apprentice.errors.any? %>
+  <ul>
+    <% @apprentice.errors.full_messages.each do |m|%>
+      <li class="danger"><%= m %></li>
+    <% end%>
+  </ul>
+<% end %>
+<%= form_for @apprentice do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+  <%= f.label :house %><br>
+  <%= f.collection_select :house, @houses, :to_s, :to_s %><br>
+  <%= f.label :year %><br>
+  <%= f.collection_select :year, ["1", "2", "3","4", "5", "6", "7"], :to_s, :to_s %> <br>
+  <%= f.label :username %><br>
+  <%= f.text_field :username %><br>
+  <%= f.label :password %><br>
+  <%= f.password_field :password %><br>
+  <%= f.label :confirm_password %><br>
+  <%= f.password_field :password_confirmation %><br>
+  <%= f.submit %>
+<% end %>
+>>>>>>> ffeb50d930c73539f901731781e38b879dc51cd4
