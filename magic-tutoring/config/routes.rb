@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :professor_availabilities
   resources :apprentice_subjects
   resources :professors
   resources :conclaves
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   get "/", to: "static#welcome", as: "welcome"
   get "/intermediate", to: "static#intermediate", as: "intermediate"
+  #post "/apprentice/:id/apprentice_subjects", to: "apprentice_subjects#create", as: "make_apprentice_subject"
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

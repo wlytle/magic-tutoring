@@ -1,0 +1,13 @@
+<h1>Indicate Your Availability</h1>
+
+<%= render "form" %>
+
+<%= month_calendar events: @professor.professor_availabilities do |date, avails| %>
+  <%= date.day %>
+
+  <% avails.each do |avail| %>
+    <div>
+      <%= link_to "#{avail.begin_time.strftime("%I:%M %p")}, #{pluralize(avail.duration, "hr")}", edit_professor_availability_path(avail) %>
+    </div>
+  <% end %>
+<% end %>

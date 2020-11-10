@@ -1,0 +1,9 @@
+<%= form_for @pa do |f| %>
+    <%= f.label :date %>
+    <%= f.date_select :date %>
+    <%= f.label :begin_time %>
+    <%= f.time_field :begin_time %>
+    <%= f.label :finish_time %>
+    <%= f.time_field :finish_time %>
+    <%= f.submit "Add Availability" %>
+<% end %>
