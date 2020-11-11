@@ -6,7 +6,7 @@ class ApprenticeSubjectsController < ApplicationController
     if @appsub.save
       redirect_to apprentice_path(@apprentice)
     else
-      flash[:danger] = "You are already signup for this subject"
+      flash[:danger] = "You are already signed up for this subject"
       redirect_to @subject
     end
   end
