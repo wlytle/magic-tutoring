@@ -1,31 +1,24 @@
 class SessionsController < ApplicationController
-  
   skip_before_action :authorized
+  include SessionsControllerHelper
 
   def new
   end
 
   def create
-    if params[:user_type] == "apprentice"
+    case params[:user_type]
+    when "apprentice"
+      #if user is an apprentice and pass login authentication show them to thier show page
       @user = Apprentice.find_by(username: params[:username])
-      if @user && @user.authenticate(params[:password])
-        session[:user_id] = @user.id
-        session[:user_type] = params[:user_type]
-        redirect_to @user
-      else
-        flash[:danger] = "Incorrect username or password"
-        redirect_to new_session_path
-      end
-    elsif params[:user_type] == "professor"
+      log_in
+    when "professor"
+      #if user is an prof and pass login authentication show them to thier show page
       @user = Professor.find_by(username: params[:username])
-      if @user && @user.authenticate(params[:password])
-        session[:user_id] = @user.id
-        session[:user_type] = params[:user_type]
-        redirect_to @user
-      else
-        flash[:danger] = "Incorrect username or password"
-        redirect_to new_session_path
-      end
+      log_in
+    else
+      #if user did not select apprentice or profeesor
+      flash[:danger] = "Must be either an apprentice or professor"
+      redirect_to new_session_path
     end
   end
 

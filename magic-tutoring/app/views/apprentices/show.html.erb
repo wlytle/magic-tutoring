@@ -8,7 +8,7 @@
 <h3> To schedule a conclave: </h3>
 <ul>
   <% @apprentice.subjects.each do |sub| %>
-    <li><%= link_to sub.name, new_conclave_path(sub) %> <%= button_to "", sub.apprentice_subjects.find_by(apprentice: @apprentice), method: :delete, class: "bin" %>
+    <li><%= link_to sub.name, new_conclave_path(sub), class: "links" %> <%= button_to "", sub.apprentice_subjects.find_by(apprentice: @apprentice), method: :delete, class: "bin" %>
     </li>
   <% end %>
 </ul>
