@@ -11,8 +11,10 @@ class ApprenticeSubjectsController < ApplicationController
     end
   end
 
-  def delete
-    # delete the ApprenticeSubject
-    redirect_to @apprentice # back to the apprentice
+  def destroy
+    @as = ApprenticeSubject.find(params[:id])
+    @as.destroy
+    @apprentice = current_user
+    redirect_to apprentice_path(@apprentice)
   end
 end
