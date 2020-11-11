@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  resources :professor_availabilities
-  resources :apprentice_subjects
+  resources :professor_availabilities, only: [:new, :create, :update]
+  resources :apprentice_subjects, only: [:create, :destroy]
   resources :professors
-  resources :conclaves, except: :new
-  resources :subjects
-  resources :apprentices
-  resources :sessions, only: [:new, :create]
+  resources :conclaves, only: [:show, :create]
+  resources :subjects, only: [:index, :show]
+  resources :apprentices, except: :index
+  resources :sessions, only: [:new, :create, :destroy]
   post "/logout", to: "sessions#destroy", as: "logout"
   get "/", to: "static#welcome", as: "welcome"
   get "/about", to: "static#about", as: "about"
