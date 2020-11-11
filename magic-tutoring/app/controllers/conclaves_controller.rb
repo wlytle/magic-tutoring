@@ -13,12 +13,14 @@ class ConclavesController < ApplicationController
   def create
     @apprentice = current_user
     availability = ProfessorAvailability.find(params[:availability])
-    professor = availability.professor
-    date = availability.date
-    begin_time = availability.begin_time
-    finish_time = availability.finish_time
 
-    @apprentice.conclaves.build(professor: professor, location: params[:conclave][:location], date: date, begin_time: begin_time, finish_time: finish_time)
+    @apprentice.conclaves.build(
+      professor: availability.professor,
+      location: params[:conclave][:location],
+      date: availability.date,
+      begin_time: availability.begin_time,
+      finish_time: availability.finish_time,
+    )
     if @apprentice.save
       redirect_to @apprentice
     else
