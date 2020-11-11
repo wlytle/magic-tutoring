@@ -3,15 +3,15 @@
 <h3>School Year: <%= @apprentice.year %></h3>
 <h3>Username: <%= @apprentice.username %></h3>
 <h3>House: <%= @apprentice.house %></h3>
+<h3>Add a subject: </h3>
+<%= button_to "Subjects", subjects_path, method: :get, class: "button" %>
 <h3> To schedule a conclave: </h3>
 <ul>
   <% @apprentice.subjects.each do |sub| %>
-    <li><%= link_to sub.name, new_conclave_path(sub) %></li>
+    <li><%= link_to sub.name, new_conclave_path(sub) %> <%= button_to "", sub.apprentice_subjects.find_by(apprentice: @apprentice), method: :delete, class: "bin" %>
+    </li>
   <% end %>
 </ul>
-<%= button_to "Edit Apprentice", edit_apprentice_path(@apprentice), method: :get, class: "button" %><br>
-
+<%= button_to "Edit Apprentice", edit_apprentice_path(@apprentice), method: :get, class: "button"%><br>
 <h2>Upcoming Conclaves </h2>
-
- <%= render "conclaves/schedule" %>
-
+<%= render "conclaves/schedule" %>

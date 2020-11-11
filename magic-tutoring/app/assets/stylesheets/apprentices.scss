@@ -2,16 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 h1 {
-    font-family: cursive;
-    margin: auto;
-    padding: 30px;
+  font-family: cursive;
+  margin: auto;
+  padding: 30px;
 }
 h3 {
-    margin: auto;
-    padding: 20px;
+  margin: auto;
+  padding: 20px;
 }
 p {
-    font-family: cursive;
-    font-size: large;
-    padding-left: 30px;
+  font-family: cursive;
+  font-size: large;
+  padding-left: 30px;
+}
+.bin {
+  background-image: asset-url("site/trash-can.png");
+  // background-repeat: no-repeat;
+  display: inline;
+  background-color: transparent;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
 }
