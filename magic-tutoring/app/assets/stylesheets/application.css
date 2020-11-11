@@ -15,7 +15,7 @@
  */
 body {
   background: goldenrod;
-  border: 3px solid black; 
+  border: 3px solid black;
   border-radius: 10px;
 }
 
@@ -60,7 +60,7 @@ h2 {
 h3 {
   font-family: Trattatello, fantasy;
   padding-left: 30px;
-  font-size: 25px; 
+  font-size: 25px;
 }
 
 .writing-desk,
@@ -85,7 +85,7 @@ h3 {
 .links:link {
   color: rgb(41, 24, 13);
   font-family: Trattatello, fantasy;
-  font-size: 23px;
+  font-size: 21px;
   border-radius: 7px;
   padding: 5px 10px;
   text-align: center;
@@ -133,4 +133,3 @@ nav {
   font-family: Trattatello, fantasy;
   color: black;
 }
-

@@ -22,6 +22,7 @@ class ConclavesController < ApplicationController
       finish_time: availability.finish_time,
     )
     if @apprentice.save
+      availability.destroy
       redirect_to @apprentice
     else
       render :new
