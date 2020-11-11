@@ -68,3 +68,18 @@ h3 {
   font-size: medium;
   font-family: cursive;
 }
+
+nav {
+  /*position: fixed;*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*display: block;*/
+  margin: 0;
+  padding: 8px;
+  font-family: Trattatello, fantasy;
+  color: white;
+  background-color: rgb(133, 117, 151);
+  text-align: center;
+}
+
