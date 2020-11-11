@@ -4,7 +4,7 @@
 
   <% conclaves.each do |conclave| %>
     <div>
-      <%= link_to "#{conclave.format_start_time}, #{pluralize(conclave.duration.to_i, "hr")}: #{conclave.location}", conclave %>
+      <%= link_to "#{conclave.format_start_time}, #{pluralize(conclave.duration.to_i, "hr")}: #{conclave.location}", conclave, class: "links"%>
     </div>
   <% end %>
 <% end %>

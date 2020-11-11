@@ -8,7 +8,7 @@
 <br>
 <h3>Enhance your Magical talents by Apprenticing with our illustrious Professors. Achieve new heights of Magical proficiency through the famous tutelage of Oktuskar Apprenticery. Need to brush up on blurry topics or prepare for upcoming entrance exams? Oktuskar's got you covered! From neophyte concepts to advanced mystical education, students can schedule one-on-one conclaves with our knowledgeable faculty.</h3>
 <br>
-<h3><%= link_to "Browse our Professors", professors_path %></h3>
+<h3><%= button_to "Browse our Professors", professors_path, method: :get, class: "button" %></h3>
 <br>
 <h3>"Return" if you are a member, or "Enroll" to create a new ledger!</h3>
 <h3><%= button_to "Return", new_session_path, method: :get, class: "button" %><br><%= button_to "Enroll", intermediate_path, method: :get, class: "button" %></h3>

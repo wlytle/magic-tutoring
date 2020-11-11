@@ -6,4 +6,9 @@ class Subject < ApplicationRecord
   def availabilities
     self.professors.map(&:professor_availabilities).flatten
   end
+
+  def subject_image
+    subject = self.name.split(" ").first.downcase!
+    "subjects/#{subject}.jpg"
+  end
 end

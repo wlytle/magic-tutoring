@@ -15,6 +15,8 @@
  */
 body {
   background: goldenrod;
+  border: 3px solid black; 
+  border-radius: 10px;
 }
 
 .field_with_errors {
@@ -29,7 +31,9 @@ body {
   color: green;
 }
 
+/* Professor images */
 img {
+  border-radius: 9px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -37,20 +41,26 @@ img {
 }
 
 h1 {
-  font-family: cursive;
+  border-color: white;
+  border-radius: 10px;
+  font-family: Trattatello, fantasy;
   text-align: center;
   font-size: 60px;
 }
 
 h2 {
-  font-family: cursive;
+  font-family: Trattatello, fantasy;
+  font-weight: 50;
+  font-size: 10px;
   margin: auto;
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 h3 {
-  font-family: cursive;
+  font-family: Trattatello, fantasy;
+  padding-left: 30px;
+  font-size: 25px; 
 }
 
 .writing-desk,
@@ -60,11 +70,67 @@ h3 {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+  border-radius: 8px;
 }
-
+/* styles button_to things */
 .button {
   color: white;
   background-color: black;
   font-size: medium;
-  font-family: cursive;
+  font-family: Trattatello, fantasy;
+  border-radius: 8px;
+  padding: 5px 10px;
 }
+/* unvisited link */
+.links:link {
+  color: rgb(41, 24, 13);
+  font-family: Trattatello, fantasy;
+  font-size: 23px;
+  border-radius: 7px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+nav {
+  /*position: fixed;*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*display: block;*/
+  margin: 0;
+  padding: 8px;
+  font-family: Trattatello, fantasy;
+  color: white;
+  background-color: rgb(133, 117, 151);
+  text-align: center;
+}
+/* visited link */
+.links:visited {
+  color: rgb(92, 79, 72);
+  font-family: Trattatello, fantasy;
+  font-size: 21px;
+  border-radius: 7px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+/* mouse over link */
+.links:hover {
+  color: rgb(247, 246, 245);
+  font-family: Trattatello, fantasy;
+  font-size: 21px;
+  border-radius: 7px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+/* selected link */
+.links:active {
+  font-family: Trattatello, fantasy;
+  color: black;
+}
+
