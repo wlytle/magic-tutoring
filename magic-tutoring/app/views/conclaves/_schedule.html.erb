@@ -1,5 +1,5 @@
 
-<%= month_calendar events: @conclaves do |date, conclaves| %>
+<%= week_calendar number_of_weeks: 2, events: @conclaves do |date, conclaves| %>
   <%= date.day %>
 
   <% conclaves.each do |conclave| %>

@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-  
   skip_before_action :authorized
 
   def new
@@ -26,6 +25,9 @@ class SessionsController < ApplicationController
         flash[:danger] = "Incorrect username or password"
         redirect_to new_session_path
       end
+    else
+      flash[:danger] = "Must be either an apprentice or professor"
+      redirect_to new_session_path
     end
   end
 

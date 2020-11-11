@@ -5,7 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Leave pictures out of it
-/app/assets/images/
+/app/assets/images/*
 # Ignore bundler config.
 /.bundle
 
