@@ -3,10 +3,15 @@
 <h3>Description: <%= @subject.description %></h3>
 <br>
 <br>
+
+<% if flash[:danger]%>
+        <p class="danger"><%= flash[:danger] %></p>
+<% end %>
+
 <% if current_user.class == Apprentice %>
-<h3><%= button_to "Add this subject", apprentice_subjects_path(@subject), method: :post, class: "button" %></h3>
+    <h3><%= button_to "Add this subject", apprentice_subjects_path(@subject), method: :post, class: "button" %></h3>
 <% else %>
-<h3><%= link_to "Enroll", new_apprentice_path %> as an Apprentice to study this subject</h3>
+    <h3><%= link_to "Enroll", new_apprentice_path %> as an Apprentice to study this subject</h3>
 <% end %>
 
 <br>
