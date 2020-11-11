@@ -1,6 +1,6 @@
 <h1>Subjects offered for Tutelage</h1>
 <ul>
     <% @subjects.each do |subject| %>
-    <li><%= link_to subject.name, subject %>
+    <li><%= link_to subject.name, subject, class: "links" %>
     <% end %>
 </ul>

@@ -33,7 +33,7 @@ class ConclavesController < ApplicationController
   end
 
   def locations
-    @locations = ["Solarium", "West Dungeons", "Hallowed Tree", "Fauna Wing", "Thaumaturgy Labs", "Herbology Dome", "Skiliworg Fields"]
+    @locations = ["Solarium", "Grand Grimoire Library", "West Dungeons", "Hallowed Tree", "Fauna Wing", "Thaumaturgy Labs", "Herbology Dome", "Skiliworg Fields"]
   end
 
   def init_conclave

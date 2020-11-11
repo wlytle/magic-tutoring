@@ -2,12 +2,12 @@
 
 <%= render "form" %>
 
-<%= month_calendar events: @professor.professor_availabilities do |date, avails| %>
+<%= week_calendar number_of_weeks: 2, events: @professor.professor_availabilities do |date, avails| %>
   <%= date.day %>
 
   <% avails.each do |avail| %>
     <div>
-      <%= link_to "#{avail.format_start_time}, #{pluralize(avail.duration.to_i, "hr")}", edit_professor_availability_path(avail) %>
+      <%= link_to "#{avail.format_start_time}, #{pluralize(avail.duration.to_i, "hr")}", edit_professor_availability_path(avail), class: "links" %>
     </div>
   <% end %>
 <% end %>
