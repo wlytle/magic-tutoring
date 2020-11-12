@@ -1,19 +1,18 @@
 .calendar-heading {
   text-align: center;
+  font-family: Didot, serif;
 }
 .calendar-title {
-  font-style: cursive; 
-  font-size: 20px;
+  font-family: Didot, serif;
+  font-size: 25px;
 }
-
 
 .simple-calendar {
   
   table {
     -webkit-border-horizontal-spacing: 0px;
     -webkit-border-vertical-spacing: 0px;
-    background-color: rgba(156, 118, 13, 0.726); 
-    /* background: url("../images/site/parchment.jpg"); */
+    background-color: rgb(133, 117, 151); 
     border: 3px solid rgb(233, 221, 188);
     border-radius: 12px;
     border-collapse: collapse;
@@ -22,7 +21,7 @@
     margin-right: auto;
     margin-bottom: 100px;
     width: 90%;
-    
+    font-family: Didot, serif;
   }
 
   tr {
@@ -79,7 +78,7 @@
   }
 
   .today {
-    background: #d48dc396;
+    background: #260f6896;
   }
 
   .past {
@@ -91,10 +90,10 @@
   }
 
   .prev-month {
-    background: rgba(168, 204, 157, 0.616);
+    background: rgb(63, 51, 114);
   }
   .next-month {
-    background: rgba(168, 204, 157, 0.616);
+    background: rgba(128, 89, 192, 0.568);
     border: 1px solid rgb(255, 255, 235);
   }
   .current-month {

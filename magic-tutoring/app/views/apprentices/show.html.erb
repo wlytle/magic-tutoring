@@ -1,18 +1,26 @@
-<h1><%= @apprentice.first_name %>'s Writing Desk</h1>
-<%= image_tag ("site/writingdesk.jpg"), class: "writing-desk" %>
-<h3>School Year: <%= @apprentice.year %></h3>
-<h3>Username: <%= @apprentice.username %></h3>
-<h3>House: <%= @apprentice.house %></h3>
-<h3>Add a subject: </h3>
-<%= button_to "Subjects", subjects_path, method: :get, class: "button" %>
-<h3> To schedule a conclave: </h3>
-<ul>
-  <% @apprentice.subjects.each do |sub| %>
-    <li><%= link_to sub.name, new_conclave_path(sub), class: "links" %> <%= button_to "", sub.apprentice_subjects.find_by(apprentice: @apprentice), method: :delete, class: "bin" %>
-    </li>
-  <% end %>
-</ul>
-<%= button_to "Edit Apprentice", edit_apprentice_path(@apprentice), method: :get, class: "button"%><br>
+<h1><%= @apprentice.first_name %>'s Writing Desk <%= image_tag (@apprentice.apprentice_house), class: "house-icon" %> </h1>
+ <div class="apprentice"> 
+  <div class="app-column1">
+    <h3>School Year: <%= @apprentice.year %></h3>
+    <h3>Username: <%= @apprentice.username %></h3>
+    <h3>House: <%= @apprentice.house %></h3>
+    <h3>Add a subject:<%= button_to "Subjects", subjects_path, method: :get, class: "button" %></h3>
+  </div>
+  <div class="app-column2">
+    <%= image_tag ("site/writingdesk.jpg"), id: "writing-desk" %>
+    <br>
+    <%= button_to "Edit Apprentice", edit_apprentice_path(@apprentice), method: :get, class: "button"%><br>
+  </div>
+  <div class="app-column3">
+    <h3> To schedule a conclave: </h3>
+    <ul>
+      <% @apprentice.subjects.each do |sub| %>
+        <li><%= link_to sub.name, new_conclave_path(sub), class: "links" %> <%= button_to "", sub.apprentice_subjects.find_by(apprentice: @apprentice), method: :delete, class: "bin" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
 <h2> Upcoming Conclaves </h2>
 <br>
 <br>

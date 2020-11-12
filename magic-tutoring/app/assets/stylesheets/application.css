@@ -31,13 +31,12 @@ body {
   color: green;
 }
 
-/* Professor images */
 img {
   border-radius: 9px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 25%;
+  width: 35%;
 }
 
 h1 {
@@ -49,7 +48,7 @@ h1 {
 }
 
 h2 {
-  font-family: Trattatello, fantasy;
+  font-family: Didot, serif;
   font-weight: 50;
   font-size: 10px;
   margin: auto;
@@ -58,12 +57,11 @@ h2 {
 }
 
 h3 {
-  font-family: Trattatello, fantasy;
+  font-family: Didot, serif;
   padding-left: 30px;
   font-size: 25px; 
 }
 
-.writing-desk,
 .about-pic {
   display: block;
   margin-left: auto;
@@ -83,22 +81,18 @@ h3 {
   color: white;
   background-color: black;
   font-size: medium;
-  font-family: Trattatello, fantasy;
+  font-family: Didot, serif;
   border-radius: 8px;
   padding: 5px 10px;
 }
-/* unvisited link */
-.links:link {
-  color: rgb(41, 24, 13);
-  font-family: Trattatello, fantasy;
-  font-size: 21px;
-  border-radius: 7px;
+.button:hover {
+  color: black;
+  background-color: white;
+  font-size: medium;
+  font-family: Didot, serif;
+  border-radius: 8px;
   padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
 }
-
 nav {
   /*position: fixed;*/
   top: 0;
@@ -108,14 +102,26 @@ nav {
   margin: 0;
   padding: 8px;
   font-family: Trattatello, fantasy;
+  font-size: 18px;
   color: white;
   background-color: rgb(133, 117, 151);
   text-align: center;
 }
+/* unvisited link */
+.links:link, a:link {
+  color: rgb(41, 24, 13);
+  font-family: Didot, serif;
+  font-size: 21px;
+  border-radius: 7px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
 /* visited link */
-.links:visited {
+.links:visited, a:visited {
   color: rgb(92, 79, 72);
-  font-family: Trattatello, fantasy;
+  font-family: Didot, serif;
   font-size: 21px;
   border-radius: 7px;
   padding: 5px 10px;
@@ -124,9 +130,9 @@ nav {
   display: inline-block;
 }
 /* mouse over link */
-.links:hover {
+.links:hover, a:hover {
   color: rgb(247, 246, 245);
-  font-family: Trattatello, fantasy;
+  font-family: Didot, serif;
   font-size: 21px;
   border-radius: 7px;
   padding: 5px 10px;
@@ -135,16 +141,16 @@ nav {
   display: inline-block;
 }
 /* selected link */
-.links:active {
-  font-family: Trattatello, fantasy;
+.links:active, a:active {
+  font-family: Didot, serif;
   color: black;
 }
 
-.house {
-  width: 250px;
+#writing-desk {
+  width: 400px;
 }
 
-.professor {
-  display: flex;
+.house-icon {
+  width: 150px; 
+  border-radius: 20px;
 }
-

@@ -23,7 +23,7 @@ class Professor < ApplicationRecord
   end 
 
   def professor_house
-    house = self.house.downcase!
+    house = self.house.tr(" ", "").downcase!
     "site/#{house}.jpg"
   end
   
