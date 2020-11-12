@@ -74,3 +74,5 @@ Professor.create(name: "Mayhallow Vorkilldon", house: houses.sample, subject: Su
 Apprentice.all.each do |app|
   rand(1..5).times do ApprenticeSubject.create(apprentice: app, subject: Subject.all.sample) end
 end
+#example of seeding avaialbility
+# ProfessorAvailability.create(professor: Professor.last, date: Date.today+2, begin_time:Time.now, finish_time: Time.now + 2.hour)

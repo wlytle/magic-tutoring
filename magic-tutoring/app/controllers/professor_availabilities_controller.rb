@@ -12,7 +12,8 @@ class ProfessorAvailabilitiesController < ApplicationController
     if @professor.save
       redirect_to new_professor_availability_path
     else
-      render "new"
+      flash[:danger] = "Availability must have a start and end time"
+      redirect_to new_professor_availability_path
     end
   end
 
