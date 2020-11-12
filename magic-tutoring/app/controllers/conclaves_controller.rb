@@ -1,7 +1,5 @@
 class ConclavesController < ApplicationController
-  def show
-    @conclave = Conclave.find(params[:id])
-  end
+  before_action :get_conclave, only: [:show, :edit, :update]
 
   def new
     @subject = Subject.find(params[:id])
@@ -32,14 +30,25 @@ class ConclavesController < ApplicationController
     end
   end
 
-  private
-
-  def conclave_params
-    params.require(:conclave).permit(:location)
+  def edit
   end
+
+  def update
+    if @conclave.update(params.require(:conclave).permit(:feedback))
+      redirect_to @conclave.professor
+    else
+      render :edit
+    end
+  end
+
+  private
 
   def locations
     @locations = ["Solarium", "Grand Grimoire Library", "West Dungeons", "Hallowed Tree", "Fauna Wing", "Thaumaturgy Labs", "Herbology Dome", "Skiliworg Fields"]
+  end
+
+  def get_conclave
+    @conclave = Conclave.find(params[:id])
   end
 
   def init_conclave

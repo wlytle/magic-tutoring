@@ -1,0 +1,7 @@
+<h1>Leave Apprentice Feedback</h1>
+
+<%= form_for @conclave do |f| %>
+ <%= f.label :feedback %>
+ <%= f.text_area :feedback %>
+ <%= f.submit "Leave Feedback"%>
+<% end %>

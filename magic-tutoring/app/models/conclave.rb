@@ -2,7 +2,7 @@ class Conclave < ApplicationRecord
   belongs_to :professor
   belongs_to :apprentice
 
-  validate :in_the_past
+  validate :in_the_past, on: :create
 
   def start_time
     self.date
