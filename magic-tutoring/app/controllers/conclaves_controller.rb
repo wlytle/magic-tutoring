@@ -11,7 +11,7 @@ class ConclavesController < ApplicationController
   def create
     @apprentice = current_user
     availability = ProfessorAvailability.find(params[:availability])
-
+    # Make a new conclave at the time corresponding tot he profs avaialability
     @conclave = Conclave.new(
       apprentice: @apprentice,
       professor: availability.professor,
@@ -21,6 +21,7 @@ class ConclavesController < ApplicationController
       finish_time: availability.finish_time,
     )
     if @conclave.save
+      #remove availability to make sure prof isn't double booked
       availability.destroy
       redirect_to @apprentice
     else
@@ -42,6 +43,7 @@ class ConclavesController < ApplicationController
   end
 
   def destroy
+    #Reinstate prof availability after conclave has been destroyed.
     ProfessorAvailability.create(
       date: @conclave.date,
       begin_time: @conclave.begin_time,

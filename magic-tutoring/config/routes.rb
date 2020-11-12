@@ -13,7 +13,5 @@ Rails.application.routes.draw do
   get "/subject/:id/conclave", to: "conclaves#new", as: "new_conclave"
   get "/conclaves/:id/edit", to: "conclaves#edit", as: "edit_conclave"
   get "/conclaves/:id", to: "conclaves#show", as: "conclave"
-
-  #post "/apprentice/:id/apprentice_subjects", to: "apprentice_subjects#create", as: "make_apprentice_subject"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
