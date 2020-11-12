@@ -15,4 +15,10 @@ class Apprentice < ApplicationRecord
       errors.add(:name, "You don't even go here.")
     end
   end
+
+  def apprentice_house #image
+    house = self.house.tr(" ", "").downcase!
+    "site/#{house}.jpg"
+  end
+  
 end

@@ -1,13 +1,27 @@
+.calendar-heading {
+  text-align: center;
+  font-family: Didot, serif;
+}
+.calendar-title {
+  font-family: Didot, serif;
+  font-size: 25px;
+}
+
 .simple-calendar {
+  
   table {
     -webkit-border-horizontal-spacing: 0px;
     -webkit-border-vertical-spacing: 0px;
-    background-color: rgba(0, 0, 0, 0);
-    border: 1px solid rgb(221, 221, 221);
+    background-color: rgb(133, 117, 151); 
+    border: 3px solid rgb(233, 221, 188);
+    border-radius: 12px;
     border-collapse: collapse;
     box-sizing: border-box;
-    max-width: 100%;
-    width: 100%;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: 100px;
+    width: 90%;
+    font-family: Didot, serif;
   }
 
   tr {
@@ -15,7 +29,7 @@
   }
 
   th {
-    padding: 6px;
+    padding: 10px;
     border-bottom: 2px solid rgb(221, 221, 221);
     border-collapse: collapse;
     border-left: 1px solid rgb(221, 221, 221);
@@ -29,7 +43,6 @@
     padding: 6px;
     vertical-align: top;
     width: 14%;
-
     border: 1px solid #ddd;
     border-top-color: rgb(221, 221, 221);
     border-top-style: solid;
@@ -65,7 +78,7 @@
   }
 
   .today {
-    background: #ffffc0;
+    background: #260f6896;
   }
 
   .past {
@@ -77,12 +90,14 @@
   }
 
   .prev-month {
-    background: #ddd;
+    background: rgb(63, 51, 114);
   }
   .next-month {
-    background: #ddd;
+    background: rgba(128, 89, 192, 0.568);
+    border: 1px solid rgb(255, 255, 235);
   }
   .current-month {
+
   }
 
   .has-events {
