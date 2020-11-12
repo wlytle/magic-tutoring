@@ -5,7 +5,7 @@ class ApprenticesController < ApplicationController
 
   def show
     #prevent students from viewing and altering others' show pages
-    redirect_to welcome_path unless @apprentice = current_user
+    redirect_to welcome_path unless @apprentice == current_user
     @conclaves = @apprentice.conclaves
   end
 

@@ -14,8 +14,9 @@
  *= require_self
  */
 body {
+  min-height: 100vh;
   background: goldenrod;
-  border: 3px solid black; 
+  border: 3px solid black;
   border-radius: 10px;
 }
 
@@ -32,12 +33,13 @@ body {
 }
 
 /* Professor images */
-img {
+.prof-img {
   border-radius: 9px;
-  display: block;
-  margin-left: auto;
+  display: block; */
+   margin-left: auto;
   margin-right: auto;
-  width: 25%;
+  padding: 50px;
+  width: 25%; 
 }
 
 h1 {
@@ -49,7 +51,7 @@ h1 {
 }
 
 h2 {
-  font-family: Trattatello, fantasy;
+  font-family: Didot, serif;
   font-weight: 50;
   font-size: 10px;
   margin: auto;
@@ -58,18 +60,23 @@ h2 {
 }
 
 h3 {
-  font-family: Trattatello, fantasy;
+  font-family: Didot, serif;
   padding-left: 30px;
-  font-size: 25px; 
+  font-size: 25px;
 }
 
-.writing-desk,
-.about-pic,
+.about-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  border-radius: 8px;
+}
 .welcome-pic {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 55%;
   border-radius: 8px;
 }
 /* styles button_to things */
@@ -77,22 +84,18 @@ h3 {
   color: white;
   background-color: black;
   font-size: medium;
-  font-family: Trattatello, fantasy;
+  font-family: Didot, serif;
   border-radius: 8px;
   padding: 5px 10px;
 }
-/* unvisited link */
-.links:link {
-  color: rgb(41, 24, 13);
-  font-family: Trattatello, fantasy;
-  font-size: 23px;
-  border-radius: 7px;
+.button:hover {
+  color: black;
+  background-color: white;
+  font-size: medium;
+  font-family: Didot, serif;
+  border-radius: 8px;
   padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
 }
-
 nav {
   /*position: fixed;*/
   top: 0;
@@ -102,14 +105,26 @@ nav {
   margin: 0;
   padding: 8px;
   font-family: Trattatello, fantasy;
+  font-size: 18px;
   color: white;
   background-color: rgb(133, 117, 151);
   text-align: center;
 }
+/* unvisited link */
+.links:link, a:link {
+  color: rgb(41, 24, 13);
+  font-family: Didot, serif;
+  font-size: 21px;
+  border-radius: 7px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
 /* visited link */
-.links:visited {
+.links:visited, a:visited {
   color: rgb(92, 79, 72);
-  font-family: Trattatello, fantasy;
+  font-family: Didot, serif;
   font-size: 21px;
   border-radius: 7px;
   padding: 5px 10px;
@@ -118,9 +133,9 @@ nav {
   display: inline-block;
 }
 /* mouse over link */
-.links:hover {
+.links:hover, a:hover {
   color: rgb(247, 246, 245);
-  font-family: Trattatello, fantasy;
+  font-family: Didot, serif;
   font-size: 21px;
   border-radius: 7px;
   padding: 5px 10px;
@@ -129,8 +144,19 @@ nav {
   display: inline-block;
 }
 /* selected link */
-.links:active {
-  font-family: Trattatello, fantasy;
+.links:active, a:active {
+  font-family: Didot, serif;
   color: black;
 }
+<<<<<<< HEAD
+=======
 
+#writing-desk {
+  width: 400px;
+}
+
+.house-icon {
+  width: 150px; 
+  border-radius: 20px;
+}
+>>>>>>> 37ea43db5a38d9134caad3ab57e2b2c87ba9f830

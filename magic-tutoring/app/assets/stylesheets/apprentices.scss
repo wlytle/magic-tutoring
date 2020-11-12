@@ -17,11 +17,26 @@ p {
 }
 .bin {
   background-image: asset-url("site/trash-can.png");
-  // background-repeat: no-repeat;
-  // display: inline;
   background-color: transparent;
   background-size: contain;
 
   width: 20px;
   height: 20px;
+}
+.apprentice {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr
+}
+.app-column1 {
+  text-align: left;
+  width: 100%
+}
+.app-column2 { /* desk picture */
+  display: block;
+  text-align: center;
+  object-fit: fill;
+}
+.app-column3 {
+  text-align: left;
+  width: 100%;
 }
