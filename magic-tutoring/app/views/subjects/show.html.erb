@@ -14,11 +14,7 @@
 <% if current_user.class == Apprentice %>
     <h3><%= button_to "Add this subject", apprentice_subjects_path(@subject), method: :post, class: "button" %></h3>
 <% else %>
-<<<<<<< HEAD
-    <h3><%= link_to "Enroll", new_apprentice_path %> as an Apprentice to study this subject</h3>
-=======
 <h3><%= link_to "Enroll", new_apprentice_path, class: "links" %> as an Apprentice to study this subject</h3>
->>>>>>> d322c232d0e80b203ae1cb1b57ed1b4e485c690b
 <% end %>
 
 <br>

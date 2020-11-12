@@ -7,6 +7,6 @@ class Conclave < ApplicationRecord
   end
 
   # def in_the_past
-  #   if date && date < Time.now || date && date time_begin && time_begin
+  #   if date && date < Date.now || date && date > Date.now begin_time
   # end
 end
