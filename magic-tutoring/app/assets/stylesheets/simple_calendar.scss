@@ -1,13 +1,28 @@
+.calendar-heading {
+  text-align: center;
+}
+.calendar-title {
+  font-style: cursive; 
+  font-size: 20px;
+}
+
+
 .simple-calendar {
+  
   table {
     -webkit-border-horizontal-spacing: 0px;
     -webkit-border-vertical-spacing: 0px;
-    background-color: rgba(0, 0, 0, 0);
-    border: 1px solid rgb(221, 221, 221);
+    background-color: rgba(156, 118, 13, 0.726); 
+    /* background: url("../images/site/parchment.jpg"); */
+    border: 3px solid rgb(233, 221, 188);
+    border-radius: 12px;
     border-collapse: collapse;
     box-sizing: border-box;
-    max-width: 100%;
-    width: 100%;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: 100px;
+    width: 90%;
+    
   }
 
   tr {
@@ -15,7 +30,7 @@
   }
 
   th {
-    padding: 6px;
+    padding: 10px;
     border-bottom: 2px solid rgb(221, 221, 221);
     border-collapse: collapse;
     border-left: 1px solid rgb(221, 221, 221);
@@ -29,7 +44,6 @@
     padding: 6px;
     vertical-align: top;
     width: 14%;
-
     border: 1px solid #ddd;
     border-top-color: rgb(221, 221, 221);
     border-top-style: solid;
@@ -65,7 +79,7 @@
   }
 
   .today {
-    background: #ffffc0;
+    background: #d48dc396;
   }
 
   .past {
@@ -77,12 +91,14 @@
   }
 
   .prev-month {
-    background: #ddd;
+    background: rgba(168, 204, 157, 0.616);
   }
   .next-month {
-    background: #ddd;
+    background: rgba(168, 204, 157, 0.616);
+    border: 1px solid rgb(255, 255, 235);
   }
   .current-month {
+
   }
 
   .has-events {

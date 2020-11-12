@@ -1,14 +1,16 @@
 <h1><%= @professor.name %></h1>
-<%= image_tag (@professor.professor_image) %>
+<div><%= image_tag (@professor.professor_image) %></div>
 
 
 <h3>Proficiency: <%= @professor.subject.name %></h3>
 <h3>House: <%= @professor.house %></h3>
 <%= button_to "Edit Profile", edit_professor_path(@professor), method: :get if @professor == current_user %>
 <%= button_to "Manage Availability", new_professor_availability_path(@professor), method: :get if @professor == current_user %>
-
+<%= image_tag (@professor.professor_house), class: "house" %>
 <br>
 <% if current_user == @professor %>
         <h2>Conclaves</h2>
+        <br>
+        <br>
         <%= render "conclaves/schedule" %>
 <% end %>

@@ -64,12 +64,18 @@ h3 {
 }
 
 .writing-desk,
-.about-pic,
+.about-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  border-radius: 8px;
+}
 .welcome-pic {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 55%;
   border-radius: 8px;
 }
 /* styles button_to things */
@@ -85,7 +91,7 @@ h3 {
 .links:link {
   color: rgb(41, 24, 13);
   font-family: Trattatello, fantasy;
-  font-size: 23px;
+  font-size: 21px;
   border-radius: 7px;
   padding: 5px 10px;
   text-align: center;
@@ -132,5 +138,13 @@ nav {
 .links:active {
   font-family: Trattatello, fantasy;
   color: black;
+}
+
+.house {
+  width: 250px;
+}
+
+.professor {
+  display: flex;
 }
 
