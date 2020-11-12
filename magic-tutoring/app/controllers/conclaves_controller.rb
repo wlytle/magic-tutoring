@@ -25,6 +25,9 @@ class ConclavesController < ApplicationController
       availability.destroy
       redirect_to @apprentice
     else
+      @subject = Subject.find(params[:id])
+      locations
+      init_conclave
       render :new
     end
   end

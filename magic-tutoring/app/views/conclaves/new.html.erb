@@ -1,4 +1,11 @@
 <h1>Create new Conclave for <%= @subject.name %></h1>
+
+<% if @apprentice.errors.any? %>
+    <% @apprentice.errors.full_messages.each do |m| %>
+      <p class="danger"><%= m %></p>
+    <% end %>
+<% end %>
+
 <%= form_for @conclave do |f| %>
     <%= f.hidden_field :subject_id, value: @subject.id %>
     <%= f.label :location %>
