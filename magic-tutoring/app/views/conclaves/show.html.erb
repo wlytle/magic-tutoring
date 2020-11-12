@@ -15,4 +15,5 @@
     <%= button_to "Leave Feedback", edit_conclave_path(@conclave), method: :get, class: "button" %>
 <% end %>
 
+<%= button_to "Cancel Conclave", @conclave, method: :delete, class: "button" %>
 <%= button_to "Back", current_user, method: :get, class: "button" %>

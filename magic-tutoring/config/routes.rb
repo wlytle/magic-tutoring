@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :professor_availabilities, only: [:new, :create, :edit, :update]
   resources :apprentice_subjects, only: [:create, :destroy]
   resources :professors
-  resources :conclaves, only: [:create, :update]
+  resources :conclaves, only: [:create, :update, :destroy]
   resources :subjects, only: [:index, :show]
   resources :apprentices, except: :index
   resources :sessions, only: [:new, :create, :destroy]

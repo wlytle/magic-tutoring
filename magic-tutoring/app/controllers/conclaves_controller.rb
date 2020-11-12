@@ -1,5 +1,5 @@
 class ConclavesController < ApplicationController
-  before_action :get_conclave, only: [:show, :edit, :update]
+  before_action :get_conclave, only: [:show, :edit, :update, :destroy]
 
   def new
     @subject = Subject.find(params[:id])
@@ -39,6 +39,17 @@ class ConclavesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    ProfessorAvailability.create(
+      date: @conclave.date,
+      begin_time: @conclave.begin_time,
+      finish_time: @conclave.finish_time,
+      professor: @conclave.professor,
+    )
+    @conclave.destroy
+    redirect_to current_user
   end
 
   private
