@@ -14,20 +14,20 @@ class ConclavesController < ApplicationController
     @apprentice = current_user
     availability = ProfessorAvailability.find(params[:availability])
 
-    @apprentice.conclaves.build(
+    @conclave = Conclave.new(
+      apprentice: @apprentice,
       professor: availability.professor,
       location: params[:conclave][:location],
       date: availability.date,
       begin_time: availability.begin_time,
       finish_time: availability.finish_time,
     )
-    if @apprentice.save
+    if @conclave.save
       availability.destroy
       redirect_to @apprentice
     else
-      @subject = Subject.find(params[:id])
+      @subject = availability.professor.subject
       locations
-      init_conclave
       render :new
     end
   end

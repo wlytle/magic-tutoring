@@ -1,7 +1,7 @@
 <h1>Create new Conclave for <%= @subject.name %></h1>
 
-<% if @apprentice.errors.any? %>
-    <% @apprentice.errors.full_messages.each do |m| %>
+<% if @conclave.errors.any? %>
+    <% @conclave.errors.full_messages.each do |m| %>
       <p class="danger"><%= m %></p>
     <% end %>
 <% end %>
