@@ -14,8 +14,9 @@
  *= require_self
  */
 body {
+  min-height: 100vh;
   background: goldenrod;
-  border: 3px solid black; 
+  border: 3px solid black;
   border-radius: 10px;
 }
 
@@ -32,12 +33,13 @@ body {
 }
 
 /* Professor images */
-img {
+.prof-img {
   border-radius: 9px;
-  display: block;
-  margin-left: auto;
+  display: block; */
+   margin-left: auto;
   margin-right: auto;
-  width: 25%;
+  padding: 50px;
+  width: 25%; 
 }
 
 h1 {
@@ -60,7 +62,7 @@ h2 {
 h3 {
   font-family: Trattatello, fantasy;
   padding-left: 30px;
-  font-size: 25px; 
+  font-size: 25px;
 }
 
 .writing-desk,
@@ -133,4 +135,3 @@ nav {
   font-family: Trattatello, fantasy;
   color: black;
 }
-

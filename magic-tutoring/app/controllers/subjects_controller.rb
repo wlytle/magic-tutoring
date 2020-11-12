@@ -6,15 +6,6 @@ class SubjectsController < ApplicationController
     @subjects = Subject.all
   end
 
-  def update
-    if @subject.update(subject_params)
-      redirect_to @subject
-    else
-      @subjects = Subject.all
-      render :edit
-    end
-  end
-
   def show
   end
 
