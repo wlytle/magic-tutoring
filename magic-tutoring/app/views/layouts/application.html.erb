@@ -10,25 +10,28 @@
   </head>
 
 <body>
-  <nav>
-    <% if current_user && current_user.class == Apprentice %>
-      <%= link_to "WELCOME!", welcome_path %>
-      <%= link_to "WRITING DESK", apprentice_path(current_user) %>
-      <%= link_to "DEPART", logout_path, method: "post", data: { confirm: "Have you finished your studies?" } %>
+
+
+<ul class="nav">
+  <% if current_user && current_user.class == Apprentice %>
+    <li><a><%= link_to "WELCOME!", welcome_path %></a></li>
+    <li><a><%= link_to "WRITING DESK", apprentice_path(current_user) %></a></li>
+    <li><a><%= link_to "DEPART", logout_path, method: "post", data: { confirm: "Have you finished your studies?" } %></a></li>
+    <%= render "/layouts/nav" %>
+  
+  <% elsif current_user && current_user.class == Professor %>
+      <li><a><%= link_to "WELCOME!", welcome_path %></a></li>
+      <li><a><%= link_to "WRITING DESK", professor_path(current_user) %></a></li>
+      <li><a><%= link_to "DEPART", logout_path, method: "post" %></a></li>
       <%= render "/layouts/nav" %>
 
-    <% elsif current_user && current_user.class == Professor %>
-      <%= link_to "WELCOME!", welcome_path %>
-      <%= link_to "WRITING DESK", professor_path(current_user) %>
-      <%= link_to "DEPART", logout_path, method: "post" %>
-      <%= render "/layouts/nav" %>
+   <% else %>
+      <li><a><%= link_to "RETURN", new_session_path %></a></li>
+      <li><a><%= link_to "ENROLL", intermediate_path %></a></li>
+        <%= render "/layouts/nav" %>
+    <% end %>   
 
-    <% else %>
-      <%= link_to "RETURN", new_session_path %>
-      <%= link_to "ENROLL", intermediate_path %>
-      <%= render "/layouts/nav" %>
-    <% end %>  
-  </nav>
+</ul class="nav">
 
 
     <%= yield %>
