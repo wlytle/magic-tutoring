@@ -20,10 +20,9 @@ body {
   border-radius: 10px;
 }
 
-.field_with_errors {
+.field_with_errors label {
   padding: 2px;
-  background-color: red;
-  display: table;
+  color: red;
 }
 .danger {
   color: red;
@@ -118,7 +117,8 @@ h3 {
 .nav li a:hover {
   background-color: rgb(143, 108, 142);
 }
-.links:link, a:link {
+.links:link,
+a:link {
   color: rgb(41, 24, 13);
   font-family: Didot, serif;
   font-size: 21px;
@@ -180,7 +180,7 @@ a:active {
 }
 
 .house-row {
-  display: flex; 
+  display: flex;
   justify-content: center;
 }
 

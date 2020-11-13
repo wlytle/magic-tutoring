@@ -5,6 +5,7 @@ class Apprentice < ApplicationRecord
   has_many :subjects, through: :apprentice_subjects
   has_secure_password
   validate :reject_student
+  validates :username, uniqueness: true
 
   def first_name
     self.name.split(" ")[0]

@@ -50,7 +50,7 @@ class ApprenticesController < ApplicationController
   end
 
   def apprentice_params
-    params.require(:apprentice).permit(:name, :username, :house, :year, :password)
+    params.require(:apprentice).permit(:name, :username, :house, :year, :password, :password_confirmation)
   end
 
   def houses

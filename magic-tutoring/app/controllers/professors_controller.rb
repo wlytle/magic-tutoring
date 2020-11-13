@@ -1,5 +1,4 @@
 class ProfessorsController < ApplicationController
-
   before_action :houses, only: [:new, :create, :edit, :update]
   before_action :get_professor, only: [:show, :edit, :update, :destroy]
   skip_before_action :authorized, only: [:index, :show, :new, :create]
@@ -47,13 +46,13 @@ class ProfessorsController < ApplicationController
     session.delete :user_id
     session.delete :user_type
     flash[:message] = "You have self destructed."
-    redirect_to welcome_path    
+    redirect_to welcome_path
   end
 
   private
 
   def professor_params
-    params.require(:professor).permit(:name, :house, :subject_id, :availability, :username, :password)
+    params.require(:professor).permit(:name, :house, :subject_id, :availability, :username, :password, :password_confirmation)
   end
 
   def get_professor

@@ -4,12 +4,12 @@ class Professor < ApplicationRecord
   has_many :apprentices, through: :conclaves
   has_many :professor_availabilities, dependent: :destroy
   has_secure_password
-
+  validates :username, :name, uniqueness: true
   validate :too_evil
 
   def too_evil
     if name && name.gsub(/\s+/, " ").strip.downcase == "voldemort"
-      errors.add(name: "It appears you are too evil to teach here.")
+      errors.add(:name, "It appears you are too evil to teach here.")
     end
   end
 
