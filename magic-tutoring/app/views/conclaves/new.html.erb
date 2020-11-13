@@ -11,7 +11,7 @@
     <%= f.label :location %>
     <%= f.collection_select :location, @locations, :to_s, :to_s %>
 
-    <%= week_calendar number_of_weeks: 2, events: @subject.availabilities do |date, avails| %>
+    <%= week_calendar number_of_weeks: 4, events: @subject.availabilities do |date, avails| %>
       <%= date.day %>
 
       <% avails.each do |avail| %>

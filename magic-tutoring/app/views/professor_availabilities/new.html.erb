@@ -6,7 +6,7 @@
 
 <%= render "form" %>
 
-<%= week_calendar number_of_weeks: 2, events: @professor.professor_availabilities do |date, avails| %>
+<%= week_calendar number_of_weeks: 4, events: @professor.professor_availabilities do |date, avails| %>
   <%= date.day %>
 
   <% avails.each do |avail| %>

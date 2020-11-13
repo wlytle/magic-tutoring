@@ -1,7 +1,7 @@
 class Apprentice < ApplicationRecord
-  has_many :conclaves, class_name: "Conclave"
+  has_many :conclaves, class_name: "Conclave", dependent: :destroy
   has_many :professors, through: :conclaves
-  has_many :apprentice_subjects
+  has_many :apprentice_subjects, dependent: :destroy
   has_many :subjects, through: :apprentice_subjects
   has_secure_password
   validate :reject_student
@@ -20,5 +20,4 @@ class Apprentice < ApplicationRecord
     house = self.house.tr(" ", "").downcase!
     "site/#{house}.jpg"
   end
-  
 end

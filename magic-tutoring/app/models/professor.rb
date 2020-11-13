@@ -1,6 +1,6 @@
 class Professor < ApplicationRecord
   belongs_to :subject
-  has_many :conclaves, class_name: "Conclave"
+  has_many :conclaves, class_name: "Conclave", dependent: :destroy
   has_many :apprentices, through: :conclaves
   has_many :professor_availabilities, dependent: :destroy
   has_secure_password
@@ -9,7 +9,7 @@ class Professor < ApplicationRecord
 
   def too_evil
     if name && name.gsub(/\s+/, " ").strip.downcase == "voldemort"
-      errors.add(:name, "It appears you are too evil to teach here.")
+      errors.add(name: "It appears you are too evil to teach here.")
     end
   end
 
