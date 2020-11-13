@@ -1,5 +1,8 @@
 <h1>Would you like to create a ledger?</h1>
 <h2>Join as an Apprentice or Professor</h2>
-<%= button_to "Apprentice", new_apprentice_path, method: :get, class: "button" %>
 <br>
-<%= button_to "Professor", new_professor_path, method: :get, class: "button" %>
+<div class="intermediate">
+    <%= button_to "Apprentice", new_apprentice_path, method: :get, class: "button" %>
+    <br>
+    <%= button_to "Professor", new_professor_path, method: :get, class: "button" %>
+</div>

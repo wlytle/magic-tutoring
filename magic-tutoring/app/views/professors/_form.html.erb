@@ -1,5 +1,5 @@
 <% if @professor.errors.any? %>
-    <p class="danger"><strong><%= pluralize(@professor.errors.size, "error") %> have occured </p>
+    <p class="danger"><strong><%= pluralize(@professor.errors.size, "error") %> occured </p>
     <ul>
         <% @professor.errors.full_messages.each do |e| %>
             <li class="danger"><%= e %> </li>

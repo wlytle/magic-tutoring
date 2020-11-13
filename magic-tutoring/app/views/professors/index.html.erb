@@ -1,4 +1,5 @@
 <h1>Professors</h1>
+<%= image_tag "professors/prof-banner.jpg", class: "banner" %>
 <ul>
 <% @professors.each do |professor| %>
     <div><%= link_to "#{professor.name} - #{professor.subject.name}" , professor_path(professor), class: "links" %></div>

@@ -1,13 +1,16 @@
-<h1><%= @professor.name %></h1>
+<div>
+<h1><%= @professor.name %>
+    <%= image_tag (@professor.professor_house), class: "house-icon" %></h1>
+</div>
 <div class="prof-stuff">
   <div>
     <%= image_tag (@professor.professor_image), class: "prof-image" %>
-    <%= button_to "Edit Profile", edit_professor_path(@professor), class: "button", method: :get if @professor == current_user %>
+    <%= button_to "Edit Profile", edit_professor_path(@professor), class: "prof-button", method: :get if @professor == current_user %>
   </div>
   <div>
-    <%= image_tag (@professor.professor_house), class: "house-icon" %>
-    <h3>Proficiency: <%= @professor.subject.name %></h3>
     <h3>House: <%= @professor.house %></h3>
+    <h3>Proficiency: <%= link_to @professor.subject.name, subject_path(@professor.subject) %></h3>
+    <h3>Course Description: <br><%= @professor.subject.description %></h3>
     <br>
     <br>
     <br>

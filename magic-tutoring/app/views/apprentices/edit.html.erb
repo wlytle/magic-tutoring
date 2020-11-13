@@ -1,5 +1,9 @@
 <h1>Edit Apprentice:</h1>
-<%= form_tag apprentice_path(@apprentice), method: "put" do %>
+<div class="form">
+  <%= form_tag apprentice_path(@apprentice), method: "put" do %>
   <%= render 'form' %>
-<% end %> <br>
+<% end %> 
+<br>
+<br>
 <%= button_to "Delete apprentice", @apprentice, method: :delete, data: {confirm: "Are you sure?"}, class: "button" %>
+</div>

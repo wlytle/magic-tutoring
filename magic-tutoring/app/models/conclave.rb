@@ -9,7 +9,7 @@ class Conclave < ApplicationRecord
   end
 
   def in_the_past
-    if (date && date.to_date < Time.now.to_date) || (begin_time && begin_time.strftime("%k:%M") < Time.now.strftime("%k:%M"))
+    if (date && date.to_date < Time.now.to_date) || (begin_time && date.to_date == Time.now.to_date && begin_time.strftime("%k:%M") < Time.now.strftime("%k:%M"))
       errors.add(:begin_time, "This date as already passed")
     end
   end

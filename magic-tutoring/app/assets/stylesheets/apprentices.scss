@@ -14,6 +14,12 @@ p {
   font-family: cursive;
   font-size: large;
   padding-left: 30px;
+
+}
+.app-links {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
 }
 .bin {
   background-image: asset-url("site/trash-can.png");
@@ -23,12 +29,20 @@ p {
   width: 20px;
   height: 20px;
 }
+.bin:hover {
+  background-image: asset-url("site/trash-can.png");
+  background-color: transparent;
+  background-size: contain;
+
+  width: 25px;
+  height: 25px;
+}
 .apprentice {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr
 }
 .app-column1 {
-  text-align: left;
+  text-align: justify;
   width: 100%
 }
 .app-column2 { /* desk picture */
@@ -37,6 +51,6 @@ p {
   object-fit: fill;
 }
 .app-column3 {
-  text-align: left;
+  text-align: right;
   width: 100%;
 }
