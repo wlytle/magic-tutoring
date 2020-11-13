@@ -17,12 +17,12 @@
         <h3><%= link_to "Enroll", new_apprentice_path %> as an Apprentice to study this subject</h3>
       <% end %>
       <br>
+    </div>
       <h3>Taught by: </h3>
-      <ul><% @subject.professors.each do |prof| %><br>
+      <ul><% @subject.professors.each do |prof| %>
           <li><%= link_to prof.name, prof, class: "links"%></li>
         <% end %>
       </ul>
-      <%= link_to "View all Subjects", subjects_path, class: "links" %>
-    </div>
+      <%= button_to "View all Subjects", subjects_path, class: "button" %>
   </div>
 </div>

@@ -15,6 +15,10 @@ p {
   font-size: large;
   padding-left: 30px;
 }
+.app-links {
+  display: flex;
+  justify-content: flex-start;
+}
 .bin {
   background-image: asset-url("site/trash-can.png");
   background-color: transparent;
@@ -22,6 +26,14 @@ p {
 
   width: 20px;
   height: 20px;
+}
+.bin:hover {
+  background-image: asset-url("site/trash-can.png");
+  background-color: transparent;
+  background-size: contain;
+
+  width: 25px;
+  height: 25px;
 }
 .apprentice {
   display: grid;

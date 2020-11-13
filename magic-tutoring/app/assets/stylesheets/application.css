@@ -79,6 +79,9 @@ h3 {
   width: 55%;
   border-radius: 8px;
 }
+.subject {
+  display: flex;
+}
 /* styles button_to things */
 .button {
   color: white;
@@ -164,4 +167,14 @@ a:active {
 .house-icon {
   width: 150px;
   border-radius: 20px;
+}
+
+.intermediate {
+  display: flex;
+  justify-content: center;
+}
+
+.intermediate .button {
+  padding-right: 10px;
+  padding-left: 10px;
 }
