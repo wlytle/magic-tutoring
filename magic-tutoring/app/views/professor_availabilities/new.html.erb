@@ -1,5 +1,9 @@
 <h1>Indicate Your Availability</h1>
 
+<% if flash[:danger]%>
+    <p class=danger><%= flash[:danger] %></p>
+<% end %>
+
 <%= render "form" %>
 
 <%= week_calendar number_of_weeks: 2, events: @professor.professor_availabilities do |date, avails| %>
@@ -11,3 +15,4 @@
     </div>
   <% end %>
 <% end %>
+<%= button_to "Back", @professor, method: :get , class: "button"%>
