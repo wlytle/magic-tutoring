@@ -1,26 +1,20 @@
 <h1>Create new Conclave for <%= @subject.name %></h1>
-
 <% if @conclave.errors.any? %>
-    <% @conclave.errors.full_messages.each do |m| %>
-      <p class="danger"><%= m %></p>
-    <% end %>
+  <% @conclave.errors.full_messages.each do |m| %>
+    <p class="danger"><%= m %></p>
+  <% end %>
 <% end %>
-
 <%= form_for @conclave do |f| %>
-    <%= f.hidden_field :subject_id, value: @subject.id %>
-    <%= f.label :location %>
-    <%= f.collection_select :location, @locations, :to_s, :to_s %>
-
-    <%= week_calendar number_of_weeks: 2, events: @subject.availabilities do |date, avails| %>
-      <%= date.day %>
-
-      <% avails.each do |avail| %>
-        <div>
+  <%= f.hidden_field :subject_id, value: @subject.id %>
+  <%= f.label :location %>
+  <%= f.collection_select :location, @locations, :to_s, :to_s %>
+  <%= week_calendar number_of_weeks: 2, events: @subject.availabilities do |date, avails| %>
+    <%= date.day %>
+    <% avails.each do |avail| %>
+      <div>
         <%= f.button "#{avail.format_start_time}, #{pluralize(avail.duration.to_i, "hr")} #{avail.professor.name}", name: "availability", value: avail.id %>
-        </div>
-      <% end %>
+      </div>
     <% end %>
-  
+  <% end %>
 <% end %>
-
 <%= button_to "Back", current_user, method: :get, class: "button" %>
