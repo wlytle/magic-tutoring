@@ -5,7 +5,8 @@
     <%= image_tag (@subject.subject_image) %>
   </div>
   <div>
-    <h3>Description: <%= @subject.description %></h3>
+    <h2>Description:</h2>
+    <h3><%= @subject.description %></h3>
     <div>
       <% if flash[:danger]%>
         <p class="danger"><%= flash[:danger] %></p>
