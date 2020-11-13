@@ -1,10 +1,11 @@
 <h1>Welcome Back</h1>
 <h2> Please identify yourself</h2>
-
+<br>
+<br>
 <% if flash[:danger] %>
     <p class="danger"><strong> <%= flash[:danger] %> <strong></p>
 <% end %>
-
+<div class="form">
 <%= form_with url: sessions_path, method: :post do |f| %>
     <%= f.label :username %>
     <%= f.text_field :username %> <br>
@@ -16,3 +17,4 @@
     <%= f.radio_button :user_type, "apprentice" %> <br>
     <%= f.submit "Login", class: "button" %>
 <% end %>
+<div>

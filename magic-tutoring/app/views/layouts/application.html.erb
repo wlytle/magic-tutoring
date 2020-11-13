@@ -26,6 +26,7 @@
       <%= render "/layouts/nav" %>
 
    <% else %>
+      <li><a><%= link_to "WELCOME!", welcome_path %></a></li>
       <li><a><%= link_to "RETURN", new_session_path %></a></li>
       <li><a><%= link_to "ENROLL", intermediate_path %></a></li>
         <%= render "/layouts/nav" %>

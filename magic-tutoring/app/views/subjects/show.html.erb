@@ -3,6 +3,7 @@
 <div class="container">
   <div class='imag'>
     <%= image_tag (@subject.subject_image) %>
+    <br>
   </div>
   <div>
     <h2>Description:</h2>
@@ -14,15 +15,18 @@
       <% if current_user.class == Apprentice %>
         <h3><%= button_to "Add this subject", apprentice_subjects_path(@subject), method: :post, class: "button" %></h3>
       <% else %>
-        <h3><%= link_to "Enroll", new_apprentice_path %> as an Apprentice to study this subject</h3>
+        <h3><%= link_to "Enroll", new_apprentice_path, class: "links" %> as an Apprentice to study this subject</h3>
       <% end %>
       <br>
     </div>
-      <h3>Taught by: </h3>
+      <h3> Taught by: </h3>
       <ul><% @subject.professors.each do |prof| %>
           <li><%= link_to prof.name, prof, class: "links"%></li>
         <% end %>
+        <br>
+      <%= button_to "View all Subjects", subjects_path, class: "button-sub" %>
       </ul>
-      <%= button_to "View all Subjects", subjects_path, class: "button" %>
+      <br>
   </div>
+  <br>
 </div>

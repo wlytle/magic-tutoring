@@ -56,7 +56,7 @@ h2 {
   font-size: 10px;
   margin: auto;
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 h3 {
@@ -177,4 +177,26 @@ a:active {
 .intermediate .button {
   padding-right: 10px;
   padding-left: 10px;
+}
+
+.house-row {
+  display: flex; 
+  justify-content: center;
+}
+
+.subjects {
+  text-align: left;
+}
+
+.form {
+  text-align: center;
+}
+
+.banner {
+  border-radius: 9px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10%;
+  width: 90%;
 }

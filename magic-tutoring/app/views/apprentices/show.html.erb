@@ -1,9 +1,11 @@
-<h1><%= @apprentice.first_name %>'s Writing Desk <%= image_tag (@apprentice.apprentice_house), class: "house-icon" %> </h1>
+<h1>Writing Desk of <%= @apprentice.name %> <%= image_tag (@apprentice.apprentice_house), class: "house-icon" %> </h1>
  <div class="apprentice"> 
   <div class="app-column1">
+  
     <h3>School Year: <%= @apprentice.year %></h3>
-    <h3>Username: <%= @apprentice.username %></h3>
     <h3>House: <%= @apprentice.house %></h3>
+    <h3>Username: <%= @apprentice.username %></h3>
+  <br>
     <h3 class="subject"><%= button_to "Add a Subject", subjects_path, method: :get, class: "button" %></h3>
   </div>
   <div class="app-column2">

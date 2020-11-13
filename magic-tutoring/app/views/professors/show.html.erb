@@ -6,7 +6,7 @@
   </div>
   <div>
     <%= image_tag (@professor.professor_house), class: "house-icon" %>
-    <h3>Proficiency: <%= @professor.subject.name %></h3>
+    <h3>Proficiency: <%= link_to @professor.subject.name, subject_path(@professor.subject) %></h3>
     <h3>Course Description: <br><%= @professor.subject.description %></h3>
     <h3>House: <%= @professor.house %></h3>
     <br>
