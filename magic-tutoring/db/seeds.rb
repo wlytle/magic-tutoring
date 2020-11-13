@@ -75,4 +75,9 @@ Apprentice.all.each do |app|
   rand(1..5).times do ApprenticeSubject.create(apprentice: app, subject: Subject.all.sample) end
 end
 #example of seeding avaialbility
-# ProfessorAvailability.create(professor: Professor.last, date: Date.today+2, begin_time:Time.now, finish_time: Time.now + 2.hour)
+Professor.all.each do |prof|
+  rand(1..6).times do
+    begin_time = Time.now + rand(-4..11)
+    ProfessorAvailability.create(professor: prof, date: Date.today + rand(14), begin_time: begin_time, finish_time: begin_time + rand(1..2).hour)
+  end
+end
