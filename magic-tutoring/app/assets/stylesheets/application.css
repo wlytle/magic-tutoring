@@ -115,6 +115,17 @@ h3 {
 .nav li a:hover {
   background-color: rgb(143, 108, 142);
 }
+.links:link, a:link {
+  color: rgb(41, 24, 13);
+  font-family: Didot, serif;
+  font-size: 21px;
+  border-radius: 7px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
 .links:visited,
 a:visited {
   color: rgb(92, 79, 72);
