@@ -19,12 +19,14 @@
       <% end %>
       <br>
     </div>
+      <% unless @subject.professors.empty? %>
       <h3> Taught by: </h3>
       <ul><% @subject.professors.each do |prof| %>
           <li><%= link_to prof.name, prof, class: "links"%></li>
+          <% end %>
         <% end %>
         <br>
-      <%= button_to "View all Subjects", subjects_path, class: "button-sub" %>
+      <%= button_to "View all Subjects", subjects_path, method: :get, class: "button-sub" %>
       </ul>
       <br>
   </div>

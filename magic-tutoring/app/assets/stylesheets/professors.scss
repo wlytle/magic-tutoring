@@ -17,3 +17,20 @@
     align-content: left;
 }
 
+/* styles button_to things */
+.prof-button {
+    color: white;
+    background-color: black;
+    font-size: medium;
+    font-family: Didot, serif;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+.prof-button:hover {
+    color: black;
+    background-color: white;
+    font-size: medium;
+    font-family: Didot, serif;
+    border-radius: 8px;
+}
+
