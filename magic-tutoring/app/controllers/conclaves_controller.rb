@@ -11,7 +11,7 @@ class ConclavesController < ApplicationController
   def create
     @apprentice = current_user
     availability = ProfessorAvailability.find(params[:availability])
-    # Make a new conclave at the time corresponding tot he profs avaialability
+    # Make a new conclave at the time corresponding to the profs avaialability
     @conclave = Conclave.new(
       apprentice: @apprentice,
       professor: availability.professor,

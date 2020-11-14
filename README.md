@@ -2,6 +2,10 @@
 
 Magic Tutoring is an app for scheduling and organizing tutoring events for a fictional school for witches and wizards. We will not permit the employment of Voldemort, nor the tuteloage of Tom Riddle. It allows a user to create an account as either an apprentice or a professor. As a professor a user can set their availability for tutoring conclaves and leave feedback on past conclaves. As an apprentice a user can signup for various subjects, see the availability for professors who tutor a given subject, and sign up for a conclave.
 
+## Use
+
+https://www.youtube.com/watch?v=qf-p6my0GQE&ab_channel=IneeAder
+
 ## Installation
 
 1. Clone this repo
