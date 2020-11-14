@@ -14,7 +14,7 @@
 
       <% avails.each do |avail| %>
         <div>
-        <%= f.button "#{avail.format_start_time}, #{pluralize(avail.duration.to_i, "hr")} #{avail.professor.name}", name: "availability", value: avail.id %>
+        <%= f.button "#{avail.format_start_time}, #{pluralize(avail.duration.to_i, "hr")} #{avail.professor.name}", name: "availability", value: avail.id, class: "button" %>
       </div>
     <% end %>
   <% end %>
